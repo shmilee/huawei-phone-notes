@@ -45,10 +45,11 @@ APPS=(
     com.huawei.android.hwpay #华为钱包安全支付
     #com.android.keyguard #华为杂志锁屏
     com.huawei.skytone #天际通
+    com.huawei.hiskytone #天际通
     com.huawei.parentcontrol #学生模式
 )
 for app in ${APPS[@]}; do
-    echo 'Uninstall $app for user $USER_ID ..."
+    echo "Uninstall $app for user $USER_ID ..."
     adb shell pm uninstall --user $USER_ID $app
 done
 ```
@@ -88,7 +89,7 @@ APPS=(
 )
 
 for app in ${APPS[@]}; do
-    echo 'Uninstall $app ..."
+    echo "Uninstall $app ..."
     adb uninstall $app
 done
 ```
@@ -103,7 +104,8 @@ done
 * [中国移动](http://www.10086.cn/)
 * [网易云音乐](https://music.163.com/#/download)
 * [携程旅行](http://app.ctrip.com/)
-* [Firefox](https://wiki.mozilla.org/Mobile/Platforms/Android). addons: Adblock Plus, Network Preferences.
+* [Firefox](https://wiki.mozilla.org/Mobile/Platforms/Android). addons: Adblock Plus, Proxy SwitchyOmega.
+* [华为备份](http://appstore.huawei.com/app/C66323)
 * [哔哩哔哩](https://www.bilibili.com/)
 * [QQ国际版](https://im.qq.com/download/)
 * [微信](https://weixin.qq.com/)
@@ -147,14 +149,36 @@ adb push --sync ./audio/Alarms /storage/sdcard0/
 adb push --sync ./audio/Notifications /storage/sdcard0/
 adb push --sync ./audio/Ringtones /storage/sdcard0/
 adb shell ls /storage/sdcard0/{Alarms,Notifications,Ringtones}
+adb reboot #重启生效
 ```
 
 # 设置记录
 
-*
-*
-*
+* 设置
+    + 【系统】> 备份和**恢复** > 外部 存储卡
+    + 【无线和网络】> 流量管理 > 套餐，显示流量、网速
+    + 【设备连接】> NFC > 默认付款应用
+    + 【应用和通知】> 通知管理、~~权限管理~~、默认应用
+    + 【电池】
+        - 省电模式 on
+        - 启动管理 > 自动管理 on
+        - 电量百分比
+    + 【声音】> 来电铃声、通知铃声
+    + 【安全和隐私】
+        - 锁屏和密码 > 杂志锁屏、锁屏签名
+        - 定位服务
+    + 【系统】> 日期和时间 > 24h制
 
-# 备份
+* 负一屏 智能助手
+    + 稍后阅读、新闻、视频、音乐 off
 
-* 实用工具 > 备份 > sd卡
+* 桌面
+    + 天气、闹钟
+    + 桌面布局
+
+* 设置 >【系统】
+    + **备份**和恢复 > 外部 存储卡 > 新建 选择数据 > 系统设置
+        - 壁纸、闹钟、骚扰拦截、天气、系统用户界面、管家设置、桌面图标布局、WLAN及密码、设置 on
+    + 开发人员选项
+        - 监控ADB安装应用 on
+
