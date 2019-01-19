@@ -122,7 +122,8 @@ find $UAPPDIR -type f -name '*.apk' -print -exec adb install -r {} \;
 * [BubbleUPnP-v2.6.1.apk](http://bbs.zhiyoo.com/thread-12442204-1-1.html) DLNA server and client, cooperates with XBMC on PC.
 * DoodleJump-v1.6.6.apk
 * [ezPDF-Reader-v2.6.9.12-paid.apk](https://www.apkhere.com/app/udk.android.reader)
-* [GoldenDict-1.6.5-Android-4.4+-free.apk](http://goldendict.mobi/downloads/android/free/)
+* [GoldenDict-v1.6.5-Android-4.4+-free.apk](http://goldendict.mobi/downloads/android/free/)
+* [JuiceSSH-v2.1.4-free.apk](https://www.apkhere.com/app/com.sonelli.juicessh)
 * [kiwix-v2.2.apk](https://wiki.kiwix.org/wiki/Software)
 * [Moon+Reader-Pro-v4.2.1-Offline.apk](https://club.huawei.com/thread-12779851-1-1.html)
 * [MX-Player-Pro-v1.10.23.apk](https://club.huawei.com/thread-17573027-1-1.html)
@@ -156,7 +157,9 @@ adb reboot #重启生效
 
 * 设置
     + 【系统】> 备份和**恢复** > 外部 存储卡
-    + 【无线和网络】> 流量管理 > 套餐，显示流量、网速
+    + 【无线和网络】
+        - WLAN > WLAN+ on，~~碰到某些WIFI并不智能，网速变慢，off~~
+        - 流量管理 > 套餐，显示流量、网速
     + 【设备连接】> NFC > 默认付款应用
     + 【应用和通知】> 通知管理、~~权限管理~~、默认应用
     + 【电池】
