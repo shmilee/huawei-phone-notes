@@ -123,6 +123,7 @@ find $UAPPDIR -type f -name '*.apk' -print -exec adb install -r {} \;
 * DoodleJump-v1.6.6.apk
 * [ezPDF-Reader-v2.6.9.12-paid.apk](https://www.apkhere.com/app/udk.android.reader)
 * [GoldenDict-v1.6.5-Android-4.4+-free.apk](http://goldendict.mobi/downloads/android/free/)
+* [hackerskeyboard-v1.41.1.apk](https://github.com/klausw/hackerskeyboard)
 * [JuiceSSH-v2.1.4-free.apk](https://www.apkhere.com/app/com.sonelli.juicessh)
 * [kiwix-v2.2.apk](https://wiki.kiwix.org/wiki/Software)
 * [Moon+Reader-Pro-v4.2.1-Offline.apk](https://club.huawei.com/thread-12779851-1-1.html)
@@ -130,6 +131,7 @@ find $UAPPDIR -type f -name '*.apk' -print -exec adb install -r {} \;
 * [RealCalc-Plus-v2.3.1-Patched.apk](https://apkhome.net/realcalc-plus-2-3-1/)
 * [smart-tools-v2.0.8-paid.apk](https://www.apkhere.com/app/kr.aboy.tools)
 * [TerminalEmulator-v1.0.70.apk](https://github.com/jackpal/Android-Terminal-Emulator)
+* [termux-v0.65.apk](https://termux.com/)
 
 ```bash
 MYAPPDIR='搜集应用'
@@ -185,3 +187,30 @@ adb reboot #重启生效
     + 开发人员选项
         - 监控ADB安装应用 on
 
+# 配置 termux
+
+输入法切换为 `Hacker's Keyboard`, 打开 termux
+
+* 使用 TUNA 镜像
+  ```bash
+  $ export EDITOR=vi
+  $ apt edit-sources #替换成如下内容
+  deb [arch=all,aarch64] https://mirrors.tuna.tsinghua.edu.cn/termux stable main
+  $ pkg update
+  ```
+
+* 查看已安装软件包
+  ```bash
+  $pkg list-installed
+  ...
+  bash
+  busybox
+  ...
+  ```
+
+* 安装常用软件包
+  ```bash
+  pkg install git openssh python vim-python zsh screenfetch
+  ```
+
+* 启用外置存储, `termux-setup-storage`
