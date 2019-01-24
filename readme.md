@@ -124,13 +124,11 @@ find $UAPPDIR -type f -name '*.apk' -print -exec adb install -r {} \;
 * [ezPDF-Reader-v2.6.9.12-paid.apk](https://www.apkhere.com/app/udk.android.reader)
 * [GoldenDict-v1.6.5-Android-4.4+-free.apk](http://goldendict.mobi/downloads/android/free/)
 * [hackerskeyboard-v1.41.1.apk](https://github.com/klausw/hackerskeyboard)
-* [JuiceSSH-v2.1.4-free.apk](https://www.apkhere.com/app/com.sonelli.juicessh)
 * [kiwix-v2.2.apk](https://wiki.kiwix.org/wiki/Software)
 * [Moon+Reader-Pro-v4.2.1-Offline.apk](https://club.huawei.com/thread-12779851-1-1.html)
 * [MX-Player-Pro-v1.10.23.apk](https://club.huawei.com/thread-17573027-1-1.html)
 * [RealCalc-Plus-v2.3.1-Patched.apk](https://apkhome.net/realcalc-plus-2-3-1/)
 * [smart-tools-v2.0.8-paid.apk](https://www.apkhere.com/app/kr.aboy.tools)
-* [TerminalEmulator-v1.0.70.apk](https://github.com/jackpal/Android-Terminal-Emulator)
 * [termux-v0.65.apk](https://termux.com/)
 
 ```bash
@@ -182,22 +180,17 @@ adb reboot #重启生效
     + 桌面布局
 
 * 设置 >【系统】
-    + **备份**和恢复 > 外部 存储卡 > 新建 选择数据 > 系统设置
-        - 壁纸、闹钟、骚扰拦截、天气、系统用户界面、管家设置、桌面图标布局、WLAN及密码、设置 on
     + 开发人员选项
         - 监控ADB安装应用 on
 
 # 配置 termux
 
-输入法切换为 `Hacker's Keyboard`, 打开 termux
+* 参考[安装使用配置教程](https://www.sqlsec.com/2018/05/termux.html), [备用网址](https://www.freebuf.com/geek/170510.html).
 
-* 使用 TUNA 镜像
-  ```bash
-  $ export EDITOR=vi
-  $ apt edit-sources #替换成如下内容
-  deb [arch=all,aarch64] https://mirrors.tuna.tsinghua.edu.cn/termux stable main
-  $ pkg update
-  ```
+* 扩展功能键, CTR, TAB, ALT
+  - 从左向右滑动, 显示隐藏式导航栏, 长按左下角的KEYBOARD.
+  - 或使用Termux快捷键: 音量加+Q
+  - 或使用备用输入法 `Hacker's Keyboard`, 全键盘
 
 * 查看已安装软件包
   ```bash
@@ -208,9 +201,24 @@ adb reboot #重启生效
   ...
   ```
 
-* 安装常用软件包
-  ```bash
-  pkg install git openssh python vim-python zsh screenfetch
-  ```
+* 安装配置常用软件
+  - 修改 motd
+  - 使用 TUNA 镜像
+  - 安装软件, git openssh python vim zsh 等
+  - 配置 git, ssh, python, vim
+  - 配置 zsh, `Cabbagec/termux-ohmyzsh`
+  - ~~安装 linux 发行版, `atilo`~~
+  - 一键脚本 `termux/termux-setup.sh`, 复制到内部存储
+    ```bash
+    $ termux-setup-storage #启用外置存储
+    $ cp ~/storage/shared/termux-setup.sh ~/
+    $ chmod +x ~/termux-setup.sh
+    $ ~/termux-setup.sh
+    $ rm ~/termux-setup.sh ~/storage/shared/termux-setup.sh
+    ```
 
-* 启用外置存储, `termux-setup-storage`
+# 备份
+
+* 设置 >【系统】> **备份**和恢复 > 外部 存储卡 > 新建 选择数据 > 系统设置
+  - 壁纸、闹钟、骚扰拦截、天气、系统用户界面、管家设置、桌面图标布局、WLAN及密码、设置 on
+
