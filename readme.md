@@ -119,13 +119,13 @@ find $UAPPDIR -type f -name '*.apk' -print -exec adb install -r {} \;
 ## 安装搜集应用
 
 * [AndSMB-v3.2.apk](http://www.lysesoft.com/products/andsmb/index.html)
+* [Anyview-v4.0.7-75.apk](https://club.huawei.com/thread-8802849-1-1.html)
 * [BubbleUPnP-v2.6.1.apk](http://bbs.zhiyoo.com/thread-12442204-1-1.html) DLNA server and client, cooperates with XBMC on PC.
 * DoodleJump-v1.6.6.apk
 * [ezPDF-Reader-v2.6.9.12-paid.apk](https://www.apkhere.com/app/udk.android.reader)
 * [GoldenDict-v1.6.5-Android-4.4+-free.apk](http://goldendict.mobi/downloads/android/free/)
 * [hackerskeyboard-v1.41.1.apk](https://github.com/klausw/hackerskeyboard)
 * [kiwix-v2.2.apk](https://wiki.kiwix.org/wiki/Software)
-* [Moon+Reader-Pro-v4.2.1-Offline.apk](https://club.huawei.com/thread-12779851-1-1.html)
 * [MX-Player-Pro-v1.10.23.apk](https://club.huawei.com/thread-17573027-1-1.html)
 * [RealCalc-Plus-v2.3.1-Patched.apk](https://apkhome.net/realcalc-plus-2-3-1/)
 * [smart-tools-v2.0.8-paid.apk](https://www.apkhere.com/app/kr.aboy.tools)
