@@ -1,0 +1,4 @@
+Host *
+    Protocol 2
+    IdentityFile ~/.ssh/id_rsa
+    ServerAliveInterval 60

@@ -126,6 +126,7 @@ find $UAPPDIR -type f -name '*.apk' -print -exec adb install -r {} \;
 * [GoldenDict-v1.6.5-Android-4.4+-free.apk](http://goldendict.mobi/downloads/android/free/)
 * [hackerskeyboard-v1.41.1.apk](https://github.com/klausw/hackerskeyboard)
 * [kiwix-v2.2.apk](https://wiki.kiwix.org/wiki/Software)
+* [mpv-android-v2018-04-29.apk](https://github.com/mpv-android/mpv-android)
 * [MX-Player-Pro-v1.10.23.apk](https://club.huawei.com/thread-17573027-1-1.html)
 * [RealCalc-Plus-v2.3.1-Patched.apk](https://apkhome.net/realcalc-plus-2-3-1/)
 * [smart-tools-v2.0.8-paid.apk](https://www.apkhere.com/app/kr.aboy.tools)
@@ -207,14 +208,19 @@ adb reboot #重启生效
   - 安装软件, git openssh python vim zsh 等
   - 配置 git, ssh, python, vim
   - 配置 zsh, `Cabbagec/termux-ohmyzsh`
+  - 添加脚本 mpv-android, 配合 you-get 看视频
+    ```bash
+    $ you-get -p mpv-android <URL>
+    ```
   - ~~安装 linux 发行版, `atilo`~~
   - 一键脚本 `termux/termux-setup.sh`, 复制到内部存储
     ```bash
     $ termux-setup-storage #启用外置存储
-    $ cp ~/storage/shared/termux-setup.sh ~/
-    $ chmod +x ~/termux-setup.sh
-    $ ~/termux-setup.sh
-    $ rm ~/termux-setup.sh ~/storage/shared/termux-setup.sh
+    $ mv ~/storage/shared/termux ~/
+    $ cd ~/termux/
+    $ chmod +x ./termux-setup.sh
+    $ ./termux-setup.sh
+    $ rm -r ~/termux/
     ```
 
 # 备份

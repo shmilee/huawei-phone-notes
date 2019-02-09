@@ -1,0 +1,33 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+if [ "${#@}" == 0 ]; then
+    echo "=> Nothing to play."
+    exit 1
+fi
+
+# mpv-android path
+mpvpath=/sdcard/mpv-playlist
+if [ -f $mpvpath ]; then
+    rm $mpvpath
+fi
+if [ ! -d $mpvpath ]; then
+    mkdir $mpvpath
+fi
+
+# https://en.wikipedia.org/wiki/M3U#Examples
+playlist=$(mktemp -p $mpvpath --dry-run --suffix=.m3u8)
+echo "=> playlist: $playlist"
+cat > $playlist <<EOF
+#EXTM3U
+EOF
+for p in $@;do
+  echo $p >> $playlist
+done
+echo "=> view list:"
+cat $playlist
+
+# https://github.com/mpv-android/mpv-android/issues/165
+mpv='am start -n is.xyz.mpv/is.xyz.mpv.MPVActivity -e filepath'
+
+echo "=> run: $mpv $playlist" 
+$mpv $playlist
