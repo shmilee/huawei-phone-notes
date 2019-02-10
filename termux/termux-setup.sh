@@ -20,26 +20,33 @@ EOF
 pkg update
 
 echo "==> 安装软件 ..."
-pkg install coreutils curl git gnupg htop openssh proot python vim-python zsh screenfetch
+pkg install htop proot screenfetch
 
-echo "==> 配置 git ..."
+echo "==> 添加 git ..."
+pkg install git
 install -Dm644 "$SDIR"/dotfile/gitconfig $HOME/.gitconfig
 
-echo "==> 配置 ssh ..."
+echo "==> 添加 ssh ..."
+pkg install gnupg openssh
 ssh-keygen
 install -Dm644 "$SDIR"/dotfile/ssh_config $HOME/.ssh/config
 
-echo "==> 配置 python ..."
+echo "==> 添加 python ..."
+pkg install python
 install -Dm644 "$SDIR"/dotfile/pip.conf $HOME/.pip/pip.conf
-pip install ipython you-get
+pip install ipython
 
-echo "==> 配置 vim ..."
+echo "==> 添加 vim ..."
+pkg install vim-python
 install -Dm644 "$SDIR"/dotfile/vimrc $HOME/.vimrc
 
-echo "==> 配置 zsh ..."
+echo "==> 添加 zsh ..."
+pkg install curl zsh
 sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"
 
 echo "==> 添加 mpv-android ..."
+pkg install coreutils ffmpeg
+pip install you-get
 install -Dm755 "$SDIR"/bin/mpv-android $PREFIX/bin/mpv-android
 
 rm -rf $HOME/termux-ohmyzsh/

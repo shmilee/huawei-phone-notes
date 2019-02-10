@@ -6,12 +6,20 @@ if [ "${#@}" == 0 ]; then
 fi
 
 # mpv-android path
-mpvpath=/sdcard/mpv-playlist
+mpvpath=/sdcard/mpv-android
 if [ -f $mpvpath ]; then
     rm $mpvpath
 fi
 if [ ! -d $mpvpath ]; then
-    mkdir $mpvpath
+    mkdir -pv $mpvpath
+fi
+if [ ! -f $mpvpath/mpv.conf ]; then
+    cat > $mpvpath/mpv.conf <<EOF
+sub-auto=fuzzy
+no-ytdl
+referrer="https://www.bilibili.com/"
+user-agent="Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0"
+EOF
 fi
 
 # https://en.wikipedia.org/wiki/M3U#Examples

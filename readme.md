@@ -208,10 +208,14 @@ adb reboot #重启生效
   - 安装软件, git openssh python vim zsh 等
   - 配置 git, ssh, python, vim
   - 配置 zsh, `Cabbagec/termux-ohmyzsh`
-  - 添加脚本 mpv-android, 配合 you-get 看视频
+  - 添加脚本 mpv-android, 调用 APP mpv, 配合 you-get 看视频
     ```bash
     $ you-get -p mpv-android <URL>
     ```
+    + APP mpv 添加 UA等, 解决一些播放错误: Settings > Advanced > Edit mpv.conf
+      ```
+      include=/sdcard/mpv-android/mpv.conf # edit by 脚本 mpv-android
+      ```
   - ~~安装 linux 发行版, `atilo`~~
   - 一键脚本 `termux/termux-setup.sh`, 复制到内部存储
     ```bash
