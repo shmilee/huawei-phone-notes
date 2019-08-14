@@ -232,3 +232,4 @@ adb reboot #重启生效
 * 设置 >【系统】> **备份**和恢复 > 外部 存储卡 > 新建 选择数据 > 系统设置
   - 壁纸、闹钟、骚扰拦截、天气、系统用户界面、管家设置、桌面图标布局、WLAN及密码、设置 on
 
+* setting sd path in `backup-list`, use script `backup-sync`

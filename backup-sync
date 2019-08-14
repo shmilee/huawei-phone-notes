@@ -1,0 +1,9 @@
+#!/bin/bash
+# https://github.com/google/adb-sync
+# https://raw.githubusercontent.com/google/adb-sync/master/adb-sync
+DST='./backup-data'
+source './backup-list'
+for src in ${LIST[@]}; do
+    mkdir -pv $DST/$src
+    ./adb-sync -t -R $src/ $DST/$src
+done
