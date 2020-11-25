@@ -129,6 +129,7 @@ find $UAPPDIR -type f -name '*.apk' -print -exec adb install -r {} \;
 * [mpv-android-v2018-04-29.apk](https://github.com/mpv-android/mpv-android)
 * [MX-Player-Pro-v1.10.23.apk](https://club.huawei.com/thread-17573027-1-1.html)
 * [RealCalc-Plus-v2.3.1-Patched.apk](https://apkhome.net/realcalc-plus-2-3-1/)
+* [Researcher_v3.16.0.apk](https://play.google.com/store/apps/details?id=io.fusetech.stackademia)
 * [smart-tools-v2.0.8-paid.apk](https://www.apkhere.com/app/kr.aboy.tools)
 * [termux-v0.65.apk](https://termux.com/)
 
