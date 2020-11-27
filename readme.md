@@ -127,6 +127,7 @@ find $UAPPDIR -type f -name '*.apk' -print -exec adb install -r {} \;
 * [hackerskeyboard-v1.41.1.apk](https://github.com/klausw/hackerskeyboard)
 * [kiwix-v2.2.apk](https://wiki.kiwix.org/wiki/Software)
 * [mpv-android-v2018-04-29.apk](https://github.com/mpv-android/mpv-android)
+* [mrdc_v10.0.8.1103-172.apk](https://www.apkmirror.com/apk/microsoft-corporation/microsoft-remote-desktop-preview/)
 * [MX-Player-Pro-v1.10.23.apk](https://club.huawei.com/thread-17573027-1-1.html)
 * [RealCalc-Plus-v2.3.1-Patched.apk](https://apkhome.net/realcalc-plus-2-3-1/)
 * [Researcher_v3.16.0.apk](https://play.google.com/store/apps/details?id=io.fusetech.stackademia)
