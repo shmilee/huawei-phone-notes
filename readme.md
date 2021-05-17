@@ -133,6 +133,7 @@ find $UAPPDIR -type f -name '*.apk' -print -exec adb install -r {} \;
 * [Researcher_v3.16.0.apk](https://play.google.com/store/apps/details?id=io.fusetech.stackademia)
 * [smart-tools-v2.0.8-paid.apk](https://www.apkhere.com/app/kr.aboy.tools)
 * [termux-v0.65.apk](https://termux.com/)
+* [VirtualXposed](https://github.com/android-hacker/VirtualXposed/)
 
 ```bash
 MYAPPDIR='搜集应用'
