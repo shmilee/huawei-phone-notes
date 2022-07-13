@@ -134,7 +134,7 @@ find $UAPPDIR -type f -name '*.apk' -print -exec adb install -r {} \;
 * [smart-tools-v2.0.8-paid.apk](https://www.apkhere.com/app/kr.aboy.tools)
 * [termux-v0.65.apk](https://termux.com/)
 * [VirtualXposed](https://github.com/android-hacker/VirtualXposed/)
-
+* [ZeroTier One](https://www.zerotier.com/download/)
 ```bash
 MYAPPDIR='搜集应用'
 find $MYAPPDIR -type f -name '*.apk' -print -exec adb install {} \;
