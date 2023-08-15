@@ -138,6 +138,8 @@ find $UAPPDIR -type f -name '*.apk' -print -exec adb install -r {} \;
 * [tailscale](https://github.com/tailscale/tailscale-android#using)
     - menu icon (three dots) on the top right must be
       repeatedly opened and closed until the "Change server" option appears
+* [github](https://github.com/settings/security)
+    - app for github 2FA
 ```bash
 MYAPPDIR='搜集应用'
 find $MYAPPDIR -type f -name '*.apk' -print -exec adb install {} \;
